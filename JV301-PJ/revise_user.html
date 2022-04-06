@@ -1,0 +1,69 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Revise user information</title>
+	<link rel="stylesheet" href="css/revise_user.css">
+<!-- <link rel="stylesheet" type="text/css" href='<c:url value="/css/common.css"/>'> -->
+</head>
+<body>
+	<!-- <jsp:include page="/incl/header_on.jsp"></jsp:include>
+	 -->
+	<section id="revise_user">
+		<hgroup>
+			<h2>회원정보 수정</h2>
+			<h3>고객님의 개인정보 수정이 가능합니다.</h3>
+		</hgroup>
+		<form id="contentWrap" action="revise_user.do" method="post">
+			<table>
+				<tr>
+					<th><label for="userId">아이디</label></th>
+					<td><input type="text" name="userId" readonly value="${customer.userId}"><br>
+					<p class="warning">* 아이디는 수정하실 수 없습니다</p>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="passwd">비밀번호</label></th>
+					<td><input type="text" name="passwd" value="${customer.passwd}"></td>
+				</tr>
+				<tr>
+					<th><label for="userName">이름</label></th>
+					<td><input type="text" name="userName" value="${customer.userName}"></td>
+				</tr>
+				<tr>
+					<th><label for="ssn">주민등록번호</label></th>
+					<td><input type="text" name="ssn" readonly value="${customer.ssn}"><br>
+					<p class="warning">* 주민등록번호는 수정하실 수 없습니다</p>
+					</td>
+				</tr>
+				<tr>
+					<th><label for="phone">휴대폰번호</label></th>
+					<td><input type="text" name="phone" value="${customer.phone}"></td>
+				</tr>
+				<tr>
+					<th><label for="email">이메일</label></th>
+					<td><input type="text" name="email" value="${customer.email}"></td>
+				</tr>
+				<tr>
+					<th><label for="addr">주소</label></th>
+					<td><input type="text" name="addr" value="${customer.addr}"></td>
+				</tr>
+				<tr>
+					<th><label for="regDate">등록날짜</label></th>
+					<td><input type="text" name="regDate" readonly value="${customer.regDate}"><br>
+					<p class="warning">* 주민등록번호는 수정하실 수 없습니다</p>
+					</td>
+				</tr>
+			</table>
+			
+			<input id="submitButton" type="submit" value="확인">
+		</form>
+	</section>
+
+	<!-- <jsp:include page="/incl/footer.jsp"></jsp:include> -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입금하기</title>
+    <link rel="stylesheet" href="css/deposit_acct.css">
+</head>
+<body>
+    <section id="deposit_acct">
+        <hgroup>
+          <h2>[UserName] 님, 입금하실 정보를 기입해 주세요.</h2>
+          <h3>회원 가입을 통해 더 많은 서비스를 제공받을 수 있습니다.</h3>
+        </hgroup>
+        
+      <div id="contentWrap">
+        <h2 class="hidden">입금 정보</h2>
+              <form action="" method="post">
+                <table>
+                    <tr>
+                        <td id="label"><label for="userId">회원 아이디</label>
+                        <input type="text" name="userId" id="userId" maxlength="12" placeholder="아이디를 입력하세요."/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">비밀번호</label>
+                            <input type="password" id="passwd" name="password" maxlength="20" placeholder="비밀번호를 입력하세요."/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="anotherBank">은행</label><select name="anotherBank" class="anotherBank" id="anotherBank">
+                                <option value="default" selected>-- 선택 --</option>
+                                <option value="하나은행">하나</option>
+                                <option value="농협은행">농협</option>
+                                <option value="우리은행">우리</option>
+                                <option value="대구은행">대구</option>
+                                <option value="부산은행">부산</option>
+                                <option value="제일은행">제일</option>
+                                <option value="신한은행">신한</option>
+                                <option value="카카오뱅크">카카오</option>
+                              </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="accountNum">계좌번호</label>
+                        <input type="text" id="accountNum" name="accountNum" placeholder="계좌번호를 입력하세요"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="howMuch">임금 금액</label>
+                            <input type="text" id="howMuch" class="howMuch" name="howMuch" placeholder="입금할 금액을 입력하세요" maxlength="15"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">현재 잔고</label></td>
+                        <td><input type="text" id="phone" name="phone" placeholder="전화번호를 입력하세요."/></td>
+                        <td id="warning2">* -을 제외한 값을 입력해 주십시오. ex&#41; 01098526678</td>
+                    </tr>
+                    
+                    <tr>
+                        <td><label for="addr1">입금 시간</label></td>
+                        <td><input type="text" class="addr" id="addr1" name="addr1" placeholder="주소를 입력하세요."/></td>
+                        <td><input type="text" class="addr" id="addr2" name="addr2" placeholder="상세 주소를 입력하세요"/></td>
+                    </tr>
+                </table>
+                
+                <input type="submit" id="submitButton" value="확인"/>
+              </form>
+        </div>
+      </section>
+</body>
+</html>

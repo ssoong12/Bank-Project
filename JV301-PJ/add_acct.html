@@ -1,0 +1,122 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> -->
+<!DOCTYPE html>
+<html>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<meta charset="UTF-8">
+<title>계좌 생성</title>
+<link rel="stylesheet" href="css/add_accts.css">
+<!-- <link rel="stylesheet" type="text/css"
+	href='<c:url value="/css/add_accts.css"/>'> -->
+</head>
+
+<body>
+	<!-- <jsp:include page="/incl/header_on.jsp" flush="true" /> -->
+	<main>
+		<section id="create_account">
+			<hgroup>
+				<h2>계좌 생성</h2>
+				<h3>은행에 방문하지 않아도 영한은행 계좌를 원하는 만큼, 간단하게 개설할 수 있습니다.</h3>
+			</hgroup>
+			<div id="createAccountWrap">
+				<h3 class="hidden">계좌 생성 내용</h3>
+				<form action="add_acct.do" method="post">
+					<table>
+						<tr id="radio-table">
+							<td><input type="radio" id="C-overdraft-acct" name="accType"
+								value="C" />마이너스 계좌 생성</td>
+							<td><input type="radio" id="S-saving-acct" name="accType"
+								value="S" />적금 계좌 생성</td>
+						</tr>
+						<tr>
+							<td id="label"><label for="interestRate">이자율</label></td>
+							<td><input type="text" name="interestRate" id="interestRate"
+								placeholder="이자율을 입력하세요." /></td>
+						</tr>
+						<tr id="limit-wrap">
+							<td id="label"><label for="limit">한도액</label></td>
+							<td><input type="text" name="limit" id="limit"
+								placeholder="한도액을 입력하세요." /></td>
+						</tr>
+						<tr id="initial-deposit-amount-wrap">
+							<td id="label"><label for="initial-deposit-amount">초기입금액</label></td>
+							<td><input type="text" name="initial-deposit-amount"
+								placeholder="초기 입금액을 입력하세요." /></td>
+						</tr>
+					</table>
+					<input type="submit" id="create-account-submitButton" value="확인" />
+				</form>
+			</div>
+		</section>
+
+		<section id="about-account-products">
+			<div id="products-wrap">
+				<dl>
+					<dt>입출금 계좌개설 서비스</dt>
+					<dd>
+						모든 개인 고객은 지점 방문 없이 비대면 실명인증을 통해<br> 인터넷뱅킹 또는 스마트뱅킹에서 계좌조회 및
+						자금이체 등의<br> 금융거래가 가능한 입출금통장을 계좌개설 서비스에서 신청할 수 있습니다.
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>예금, 적금, 신청 서비스</dt>
+					<dd>
+						개인 고객은 지점 방문 없이 비대면 실명확인을 통해<br> 우리은행에서 제공하는 예금 및 적금을 신청할 수
+						있습니다.
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>전자금융 신청 서비스</dt>
+					<dd>
+						당행에 거래가 있는 고객은 지점 방문 없이 비대면 실명확인을<br> 통해 전자금융 신청, 타행 OTP 등록,
+						디지털OTP 신청등의<br>서비스를 이용하실 수 있습니다.
+					</dd>
+				</dl>
+
+				<dl>
+					<dt>제신고 업무</dt>
+					<dd>
+						당행에 거래가 있는 고객은 지점 방문 없이 비대면 실명확인을<br> 통해 이용자비밀번호 3회 오류 해제,
+						장기미사용 고객해제 등의 제신고 업무를 이용하실 수 있습니다.
+					</dd>
+				</dl>
+			</div>
+		</section>
+	</main>
+	<!-- <jsp:include page="/incl/footer.jsp" flush="true" /> -->
+
+	
+	<script>
+    let c_acct = document.getElementById("C-overdraft-acct");
+    let s_acct = document.getElementById("S-saving-acct");
+    let num = 0;
+
+    let initial_deposit_amount = document.getElementById("initial-deposit-amount-wrap");
+    let limit = document.getElementById("limit-wrap");
+
+    c_acct.addEventListener("click", function() {
+      initial_deposit_amount.setAttribute("hidden", true);
+      limit.setAttribute("visible", true);
+      
+      // 확인 버튼 position 변경
+      document.querySelector("#create-account-submitButton").style.bottom='100px';
+
+      
+    });
+
+    s_acct.addEventListener("click", function() {
+      limit.setAttribute("hidden", true);
+      initial_deposit_amount.setAttribute("visible", true);
+      
+      // 확인 버튼 position 변경
+      document.querySelector("#create-account-submitButton").style.bottom='100px';
+    });
+  </script>
+</body>
+</html>

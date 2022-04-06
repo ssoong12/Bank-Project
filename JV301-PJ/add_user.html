@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입 페이지</title>
+</head>
+<link rel="stylesheet" type="text/css" href='css/add_user.css'/>
+<body>
+  <!-- <header>
+	<jsp:include page="/incl/header.jsp" flush="true"/>
+  </header> -->
+  <section id="add_user">
+    <hgroup>
+      <h2>회원 가입</h2>
+      <h3>회원 가입을 통해 더 많은 서비스를 제공받을 수 있습니다.</h3>
+    </hgroup>
+    
+  <div id="contentWrap">
+    <h2 class="hidden">회원 가입 내용</h2>
+  		<form action="add_user.do" method="post">
+            <table>
+                <tr>
+                    <td id="label"><label for="userId">아이디</label></td>
+                    <td><input type="text" name="userId" id="userId" maxlength="12" placeholder="아이디를 입력하세요."/></td>
+                    <td><input type="button" id="duplicateCheck" name="duplicateCheck" value="중복 확인"/></td>
+                </tr>
+                <tr>
+                    <td><label for="password">비밀번호</b></td>
+                    <td><input type="password" id="passwd" name="password" maxlength="20" placeholder="비밀번호를 입력하세요."/></td>
+                    <td id="warning">* 영문 대,소문자와 특수기호는 필수 항목입니다.</td>
+                </tr>
+                <tr>
+                    <td><label for="userName">이름</label></td>
+                    <td><input type="text" id="userName" name="userName" placeholder="이름을 입력하세요."/></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><label for="ssn1">주민번호</label></td>
+                    <td><input type="text" id="ssn1" class="ssn" name="ssn1" placeholder="주민번호 앞 6자리" maxlength="6"/></td>
+                    <td>-<input type="text" id="ssn2" class="ssn" name="ssn2" placeholder="주민번호 뒤 7자리" maxlength="7"/></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">전화번호</label></td>
+                    <td><input type="text" id="phone" name="phone" placeholder="전화번호를 입력하세요."/></td>
+                    <td id="warning2">* -을 제외한 값을 입력해 주십시오. ex&#41; 01098526678</td>
+                </tr>
+                <tr>
+                    <td><label for="email1">email</label></td>
+                    <td><input type="text" class="email" id="email1" name="email1" placeholder="이메일을 입력하세요."/> </td>
+                    <td>&#64;<select name="email2" class="email" id="email2">
+		                    <option value="default" selected>-- 선택 --</option>
+		                    <option value="naver.com">naver.com</option>
+		                    <option value="google.com">google.com</option>
+		                    <option value="daum.net">daum.net</option>
+		                  </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="addr1">주소</label></td>
+                    <td><input type="text" class="addr" id="addr1" name="addr1" placeholder="주소를 입력하세요."/></td>
+                    <td><input type="text" class="addr" id="addr2" name="addr2" placeholder="상세 주소를 입력하세요"/></td>
+                </tr>
+            </table>
+		    
+		    <input type="submit" id="submitButton" value="확인"/>
+  		</form>
+	</div>
+  </section>
+
+  <!-- <footer>
+	<jsp:include page="/incl/footer.jsp"></jsp:include>
+  </footer> -->
+</body>
+</html>

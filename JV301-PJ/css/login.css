@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+/* 초기화 */
+h2, p, label, table, tr, td {margin: 0; padding: 0;}
+body {
+    margin: 0 auto;
+    font-family: 'Pretendard-SemiBold', Tahoma, Geneva, Verdana, sans-serif;
+  }
+#login li { list-style: none;}
+#login a { 
+    text-decoration: none;
+    float: left;
+}
+/* 로그인창 */
+#login section {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    /* margin: 0 auto; */
+    /* background-color: #9698a6; */
+}
+#login h2 {
+    width: 400px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 60px 0 20px 0;
+    font-size: 40px;
+    text-align: center;
+}
+#login form {
+    width: 400px;
+    height: 550px;
+    margin: 0 auto;
+    /* border: 1px solid #9698a6;; */
+}
+
+#login th {
+    height: 60px;
+    
+}
+#login tr {
+    display: block;
+}
+#login td {
+    display: block;
+}
+#login #userId {
+    width: 385px;
+    height: 40px;
+}
+#login #passwd {
+    width: 385px;
+    height: 40px;
+}
+#login .checkbox {
+    margin-top: 30px;
+}
+#login table {
+    position: relative;
+    bottom: 50px;
+    margin: 0 auto;
+}
+#login thead {
+    position: absolute;
+    left: -9999px;
+}
+#login label {
+    font-size: 30px;
+}
+#login ul {
+    width: 400px;
+    height: 80px;
+    padding: 0;
+    /* margin: 0 auto; */
+    /* text-align: center; */
+}
+#login li {
+    position: relative;
+    bottom: 50px;
+    /* margin: 0 auto; */
+}
+#login li>a {
+    
+    margin: 10px 30px;
+    color: #9698a6;
+}
+#login #submitButton {
+    position: relative;
+    top: 470px;
+    /* left:calc(50% - 35px); */
+    height: 60px;
+    width: 400px;
+    background: linear-gradient(
+      120deg,
+      #2bb7da,
+      #31d35c
+    );
+    border-radius: 10px;
+    border: none;
+    color:#fff;
+    font-size: 16px;
+    font-weight: bold;
+    
+  }

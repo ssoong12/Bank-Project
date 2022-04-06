@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기 성공</title>
+    <link rel="stylesheet" href="css/success_passwd.css">
+</head>
+<body>
+     <section id="success_passwd">
+        <hgroup>
+            <h2>비밀번호 찾기 성공!</h2>
+            <h3>&#91;${customer.userName}&#93; 회원님의 비밀번호입니다.</h3>
+        </hgroup>
+        <form name="customer" action="success_userId.do" method="post">
+            <p id="userId">아이디 : ${customer.userId} </p>
+            <p id="passwd">비밀번호 : ${customer.passwd} </p>
+            <ul>
+                <li><a href="login.jsp">로그인 </a></li>
+                <li><a href="find_userId.jsp"> 아이디 찾기</a> </li>
+            </ul>
+        </form>
+     </section>
+</body>
+</html>

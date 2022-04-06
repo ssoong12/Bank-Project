@@ -1,0 +1,57 @@
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" session="true"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원가입 성공</title>
+<!-- <link href='<c:url value="/css/common.css"/>' rel="stylesheet">
+<link rel="stylesheet" type="text/css"
+	href='<c:url value="/css/success_join.css" />'> -->
+	<link rel="stylesheet" href="css/success_join.css">
+</head>
+<!-- <jsp:useBean id="customer" class="banking.domain.Customer"
+	scope="request" /> -->
+<!-- scope="request" 안적어줘도 된다. 안적으면 알아서 찾는다. but, 명시적으로 적어주는 게 좋다(그게 더 속도가 빠르다) -->
+<!-- <%
+//String userId = (String)request.getAttribute("userId");
+//User user = (User)request.getAttribute("user");
+%> -->
+<body>
+	<!-- <jsp:include page="/incl/header.jsp" flush="true" /> -->
+	 <section id="success_join">
+		<h2>회원가입 성공</h2>
+		<p>영한은행에서의 업무를 손쉽게 처리하실 수 있습니다.</p>
+
+		<div id="infoWrap">
+			<h3>회원가입 정보</h3>
+      <table>
+			<tr>
+				<td class="info-title">아이디:</td>
+				<td><jsp:getProperty property="userId" name="customer"/></td>
+			</tr>
+			<tr>
+				<td class="info-title">회원 이름:</td>
+				<td><jsp:getProperty property="userName" name="customer"/></td>
+			</tr>
+			<tr>
+				<td class="info-title">이메일:</td>
+				<td><jsp:getProperty property="addr" name="customer"/></td>
+			</tr>
+			<tr>
+				<td class="info-title">주소:</td>
+				<td><jsp:getProperty property="email" name="customer"/></td>
+			</tr>	
+	    </table>
+			<a href="login.jsp" id="login">로그인</a>
+		</div>
+	</section>
+	<!-- <jsp:include page="/incl/footer.jsp" flush="true" /> -->
+</body>
+</html>
+
